@@ -1,5 +1,0 @@
-com/example/dataservice/DataServiceApplication.class
-com/example/dataservice/service/TradesService.class
-com/example/dataservice/repository/TradesRepository.class
-com/example/dataservice/controller/TradesController.class
-com/example/dataservice/entity/Trades.class
