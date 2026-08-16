@@ -26,7 +26,7 @@ java -jar target/springboot-mssql-0.0.1-SNAPSHOT.jar
 http://localhost:8080/api/trades?input_ymd=20260807&koyu_mei_cd=0004
 ```
 
-### SQL Server
+### Docker for SQL Server
 docker image for Microsoft SQL server 
 Name=mcr.microsoft.com/azure-sql-edge
 Port=1401
@@ -35,5 +35,18 @@ Port=1401
 docker start mssql
 docker ps
 docker stop
+```
+
+### SQL Server
+Concurrent user connections config
+```
+-- change concurrent user to 100
+EXEC sp_configure 'user connections', 100
+RECONFIGURE
+```
+Restart docker for mssql
+```
+-- show the current config for concurrent user connections
+EXEC sp_configure 'user connections'
 ```
 

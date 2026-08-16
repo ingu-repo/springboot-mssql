@@ -1,0 +1,1 @@
+SELECT    COUNT(*) AS total_sessions, SUM(CASE WHEN is_user_process = 1 THEN 1 ELSE 0 END) AS user_sessions FROM sys.dm_exec_sessions;

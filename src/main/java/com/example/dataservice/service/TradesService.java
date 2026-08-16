@@ -6,6 +6,8 @@ import org.springframework.stereotype.Service;
 import java.util.List;
 import java.util.Map;
 
+import com.example.dataservice.entity.Trade;
+
 @Service
 public class TradesService {
 
@@ -15,15 +17,15 @@ public class TradesService {
         this.tradesRepository = tradesRepository;
     }
 
-    public List<Map<String, Object>> getTrades() {
+    public List<Trade> getTrades() {
         return tradesRepository.findAll();
     }
 
-    public List<Map<String, Object>> getTrades(int input_ymd) {
+    public List<Trade> getTrades(int input_ymd) {
         return tradesRepository.findAll(input_ymd);
     }
 
-    public List<Map<String, Object>> getTrades(int input_ymd, String koyu_mei_cd) {
+    public List<Trade> getTrades(int input_ymd, String koyu_mei_cd) {
         return tradesRepository.findAll(input_ymd, koyu_mei_cd);
     }
 
